@@ -1,9 +1,18 @@
 package calculadoraMementable;
 
+import calculadora.Calculadora;
 import calculadora.Comando;
 
 public class ComandoDeshacer implements Comando{
-
+	GestorMementos gm;
+	Calculadora c;
+	
+	public ComandoDeshacer(Calculadora calc, GestorMementos gm) {
+		this.c=calc;
+		this.gm=gm;
+	}
+	
+	
 	@Override
 	public String name(){
 		return "Deshacer: ";

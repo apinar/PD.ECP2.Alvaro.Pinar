@@ -1,7 +1,7 @@
 package calculadora;
 
 public class Calculadora {
-    private int total;
+    protected int total;
 
     public Calculadora() {
         this.iniciar();
