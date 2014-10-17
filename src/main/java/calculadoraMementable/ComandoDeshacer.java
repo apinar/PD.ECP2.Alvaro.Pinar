@@ -1,7 +1,6 @@
 package calculadoraMementable;
 
 import upm.jbb.IO;
-import calculadora.Calculadora;
 import calculadora.Comando;
 
 public class ComandoDeshacer implements Comando{
@@ -20,7 +19,7 @@ public class ComandoDeshacer implements Comando{
 
 	@Override
 	public void execute() {
-		//Da la lista de puntos de restauracion -> IO
-		c.restoreMemento(gm.getMemento(IO.in.readString("Dame una clave para recuperar el memento")));		
+		IO.out.println(gm.keys());
+		c.restoreMemento(gm.getMemento(IO.in.readString("Dame una clave para recuperar el memento")));
 	}
 }

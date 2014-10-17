@@ -19,8 +19,7 @@ public class ComandoGuardar implements Comando{
 
 	@Override
 	public void execute() {
-		String clave="";
-		gm.addMemento((String) IO.in.read(clave, "Dame una clave para identificar el memento"), c.createMememnto());
+		gm.addMemento(IO.in.readString( "Dame una clave para identificar el memento"), c.createMemento());
 	}
 	
 

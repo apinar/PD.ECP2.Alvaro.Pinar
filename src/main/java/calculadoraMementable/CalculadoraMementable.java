@@ -4,7 +4,7 @@ import calculadora.Calculadora;
 
 public class CalculadoraMementable extends Calculadora{
 	
-public MementoCalculadora createMememnto(){
+public MementoCalculadora createMemento(){
 	return new MementoCalculadora(this.total);	
 	}
 
