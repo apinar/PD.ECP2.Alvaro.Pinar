@@ -1,14 +1,13 @@
 package calculadoraMementable;
 
 import upm.jbb.IO;
-import calculadora.Calculadora;
 import calculadora.Comando;
 
 public class ComandoGuardar implements Comando{
-	GestorMementos gm;
-	Calculadora  c;
+	GestorMementos<MementoCalculadora> gm;
+	CalculadoraMementable c;
 	
-	public ComandoGuardar(Calculadora calc, GestorMementos gm) {
+	public ComandoGuardar(CalculadoraMementable calc, GestorMementos<MementoCalculadora> gm) {
 		this.c=calc;
 		this.gm=gm;
 	}
@@ -20,11 +19,8 @@ public class ComandoGuardar implements Comando{
 
 	@Override
 	public void execute() {
-		// Pide al IO una clave
-		// A la calculadora le pide un memento.
-		// Guarda el memento y la clave en el gm
-		
-		
+		String clave="";
+		gm.addMemento((String) IO.in.read(clave, "Dame una clave para identificar el memento"), c.createMememnto());
 	}
 	
 
