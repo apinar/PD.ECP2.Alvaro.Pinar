@@ -1,21 +1,22 @@
 package calculadora;
 
-public class ComandoSumar implements Comando {
+import upm.jbb.IO;
 
+public class ComandoSumar implements Comando {
+	Calculadora c;
+	
 	public ComandoSumar(Calculadora calc) {
-		// TODO Auto-generated constructor stub
+		this.c=calc;
 	}
 
 	@Override
 	public String name() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Suma: ";
 	}
 
 	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
-		
+		c.sumar(IO.in.readInt());
 	}
 
 }
