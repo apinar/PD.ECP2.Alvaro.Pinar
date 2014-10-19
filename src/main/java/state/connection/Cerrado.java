@@ -2,6 +2,10 @@ package state.connection;
 
 public class Cerrado extends State{
 
+	public Cerrado(Estado cerrado) {
+		this.estado=cerrado;
+	}
+
 	@Override
 	public void abrir() {
 		this.estado = Estado.PREPARADO;
