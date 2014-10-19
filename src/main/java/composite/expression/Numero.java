@@ -12,5 +12,10 @@ public class Numero extends Expresion{
 	public int operar() {
 		return numero;
 	}
+	
+	@Override
+	public String toString(){
+		return Integer.toString(numero);
+	}
 
 }

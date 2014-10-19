@@ -8,8 +8,11 @@ public class Multiplicar extends Operacion {
 
 	@Override
 	public int operar() {
-		// TODO Auto-generated method stub
-		return 0;
+		return expr.operar()*exp2.operar();
 	}
 
+	@Override
+	public String toString(){
+		return "("+expr.toString()+"*"+exp2.toString()+")";
+	}
 }
