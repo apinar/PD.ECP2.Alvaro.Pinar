@@ -1,15 +1,16 @@
 package composite.expression;
 
-public class Numero extends Operacion{
+public class Numero extends Expresion{
+	private int numero;
 	
 	public Numero(int numero) {
-		super(numero);
+		this.numero=numero;
+		this.isExpresion=false;
 	}
 
 	@Override
 	public int operar() {
-		// TODO Auto-generated method stub
-		return 0;
+		return numero;
 	}
 
 }

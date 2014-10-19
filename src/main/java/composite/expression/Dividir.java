@@ -1,11 +1,9 @@
 package composite.expression;
 
 public class Dividir extends Operacion {
-	private Operacion expr;
 	
-	public Dividir(Operacion expr, Numero operador) {
-		super(operador);
-		this.expr=expr;
+	public Dividir(Expresion expr, Numero numero) {
+		super(expr,numero);
 	}
 
 	@Override

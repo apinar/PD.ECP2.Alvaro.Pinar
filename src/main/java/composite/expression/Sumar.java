@@ -1,11 +1,9 @@
 package composite.expression;
 
 public class Sumar extends Operacion {
-	private Operacion expr;
 	
-	public Sumar(Operacion expr, Numero operador) {
-		super(operador);
-		this.expr=expr;
+	public Sumar(Expresion expr, Numero numero) {
+		super(expr,numero);
 	}
 
 	@Override

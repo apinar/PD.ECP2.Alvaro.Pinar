@@ -1,11 +1,9 @@
 package composite.expression;
 
 public class Multiplicar extends Operacion {
-	private Operacion expr;
 	
-	public Multiplicar(Operacion expr, Numero operador) {
-		super(operador);
-		this.expr=expr;
+	public Multiplicar(Expresion expr, Numero numero) {
+		super(expr,numero);
 	}
 
 	@Override

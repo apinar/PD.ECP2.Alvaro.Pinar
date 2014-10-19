@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ExpressionTest {
-    private Operacion exp1, exp2, exp3, exp4, exp5, exp6;
+    private Expresion exp1, exp2, exp3, exp4, exp5, exp6;
 
     @Before
     public void ini() {

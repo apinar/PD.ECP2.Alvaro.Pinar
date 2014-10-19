@@ -1,5 +1,8 @@
 package composite.expression;
 
-public class Expresion {
+public abstract class Expresion {
+	protected boolean isExpresion;
+	
+	public abstract int operar();
 
 }

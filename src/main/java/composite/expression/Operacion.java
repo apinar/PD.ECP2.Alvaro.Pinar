@@ -1,12 +1,14 @@
 package composite.expression;
 
-public abstract class Operacion {
-	private int operador;
+public abstract class Operacion extends Expresion{
+	private Expresion expr;
+	private Numero numero;
 	
-	public Operacion(int operador){
-		this.operador=operador;
+	public Operacion (Expresion expr,Numero numero){
+		this.numero=numero;
+		this.expr=expr;
+		this.isExpresion=false;
 	}
 	
-	public abstract int operar();
 
 }
