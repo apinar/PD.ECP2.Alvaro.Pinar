@@ -4,37 +4,35 @@ public class Preparado extends State{
 
 	@Override
 	public void abrir() {
-		// TODO Auto-generated method stub
-		
+		//assert false : "estado imposible";
 	}
 
 	@Override
 	public void cerrar() {
-		// TODO Auto-generated method stub
-		
+		this.estado = Estado.CERRADO;
 	}
 
 	@Override
 	public void parar() {
-		// TODO Auto-generated method stub
-		
+		this.estado = Estado.PARADO;
 	}
 
 	@Override
 	public void iniciar() {
-		// TODO Auto-generated method stub
+		//assert false : "estado imposible";
 		
 	}
 
 	@Override
 	public void enviar(String msg) {
-		// TODO Auto-generated method stub
+		this.link.enviar(msg);
+        this.estado = Estado.ESPERANDO;
 		
 	}
 
 	@Override
 	public void recibir(int respuesta) {
-		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Acción no permitida... ");
 		
 	}
 

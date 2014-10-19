@@ -4,38 +4,32 @@ public class Parado extends State{
 
 	@Override
 	public void abrir() {
-		// TODO Auto-generated method stub
-		
+		throw new UnsupportedOperationException("Acción no permitida... ");
 	}
 
 	@Override
 	public void cerrar() {
-		// TODO Auto-generated method stub
-		
+		throw new UnsupportedOperationException("Acción no permitida... ");
 	}
 
 	@Override
 	public void parar() {
-		// TODO Auto-generated method stub
-		
+		//assert false : "estado imposible";
 	}
 
 	@Override
 	public void iniciar() {
-		// TODO Auto-generated method stub
-		
+		this.estado = Estado.PREPARADO;
 	}
 
 	@Override
 	public void enviar(String msg) {
-		// TODO Auto-generated method stub
-		
+		throw new UnsupportedOperationException("Acción no permitida... ");
 	}
 
 	@Override
 	public void recibir(int respuesta) {
-		// TODO Auto-generated method stub
-		
+		throw new UnsupportedOperationException("Acción no permitida... ");
 	}
 
 }
