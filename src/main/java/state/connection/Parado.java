@@ -2,6 +2,10 @@ package state.connection;
 
 public class Parado extends State{
 
+	public Parado(Conexion conexion) {
+		this.conexion=conexion;
+	}
+
 	@Override
 	public void abrir() {
 		throw new UnsupportedOperationException("Acción no permitida... ");
@@ -14,12 +18,11 @@ public class Parado extends State{
 
 	@Override
 	public void parar() {
-		//assert false : "estado imposible";
 	}
 
 	@Override
 	public void iniciar() {
-		this.estado = Estado.PREPARADO;
+		this.conexion.setState(new Preparado(conexion));
 	}
 
 	@Override
@@ -32,4 +35,8 @@ public class Parado extends State{
 		throw new UnsupportedOperationException("Acción no permitida... ");
 	}
 
+	public Estado getEstado(){
+		return Estado.PARADO;
+		
+	}
 }

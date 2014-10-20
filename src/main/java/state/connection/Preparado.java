@@ -2,31 +2,32 @@ package state.connection;
 
 public class Preparado extends State{
 
+	public Preparado(Conexion conexion) {
+		this.conexion=conexion;
+	}
+
 	@Override
 	public void abrir() {
-		//assert false : "estado imposible";
 	}
 
 	@Override
 	public void cerrar() {
-		this.estado = Estado.CERRADO;
+		this.conexion.setState(new Cerrado(conexion));
 	}
 
 	@Override
 	public void parar() {
-		this.estado = Estado.PARADO;
+		this.conexion.setState(new Parado(conexion));
 	}
 
 	@Override
-	public void iniciar() {
-		//assert false : "estado imposible";
-		
+	public void iniciar() {		
 	}
 
 	@Override
 	public void enviar(String msg) {
-		this.link.enviar(msg);
-        this.estado = Estado.ESPERANDO;
+		this.conexion.getLink().enviar(msg);
+        this.conexion.setState(new Esperando(conexion));
 		
 	}
 
@@ -35,5 +36,10 @@ public class Preparado extends State{
 		throw new UnsupportedOperationException("Acción no permitida... ");
 		
 	}
-
+	
+	public Estado getEstado(){
+		return Estado.PREPARADO;
+		
+	}
+	
 }

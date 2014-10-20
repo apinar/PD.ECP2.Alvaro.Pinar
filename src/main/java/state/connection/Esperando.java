@@ -2,6 +2,10 @@ package state.connection;
 
 public class Esperando extends State{
 
+	public Esperando(Conexion conexion) {
+		this.conexion=conexion;
+	}
+
 	@Override
 	public void abrir() {
 		throw new UnsupportedOperationException("Acción no permitida... ");
@@ -30,10 +34,15 @@ public class Esperando extends State{
 	@Override
 	public void recibir(int respuesta) {
 		if (respuesta == 0) {
-            this.estado = Estado.PREPARADO;
+            this.conexion.setState(new Preparado(conexion));
         } else {
-            this.estado = Estado.CERRADO;
+            this.conexion.setState(new Cerrado(conexion));
         }
+	}
+	
+	public Estado getEstado(){
+		return Estado.ESPERANDO;
+		
 	}
 
 }

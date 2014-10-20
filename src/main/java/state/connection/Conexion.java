@@ -8,14 +8,14 @@ public class Conexion {
     public Conexion(Link link) {
         assert link != null;
         this.link = link;
-        this.estado = new Cerrado(Estado.CERRADO);
+        this.estado = new Cerrado(this);
     }
 
     public Link getLink() {
         return link;
     }
     
-    private void setState(State estado){
+    public void setState(State estado){
     	this.estado=estado;
     }
 
