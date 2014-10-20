@@ -13,7 +13,7 @@ public class Parrafo extends Composite{
 
 	@Override
 	public String dibujar(boolean mayusculas) {
-		String parrafo = this.dibujar(mayusculas);
+		String parrafo = super.dibujar(mayusculas);
 		parrafo += "\n";
 		return parrafo;
 	}

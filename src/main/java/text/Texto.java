@@ -13,7 +13,7 @@ public class Texto extends Composite{
 
 	@Override
 	public String dibujar(boolean mayusculas) {
-		String texto = this.dibujar(mayusculas);
+		String texto = super.dibujar(mayusculas);
 		texto += "---o---\n";
 		return texto;
 	}
